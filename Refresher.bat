@@ -1,6 +1,6 @@
 @echo off
 
-echo ----- Uninstaller Information -----
+echo ----- Refresher Information -----
 echo:
 
 type "README (읽으시오).txt"
@@ -9,14 +9,6 @@ echo:
 echo:
 
 set /p ans = Press any key to continue:
-
-echo:
-
-echo ----- Removing Hidden Directory -----
-echo:
-
-del "C:\Windows\tkf.bat"
-rmdir /s /q "C:\Program Files\TKF Corp"
 
 echo:
 
@@ -33,7 +25,7 @@ start explorer.exe
 
 echo:
 
-echo ----- Uninstaller Completed -----
+echo ----- Refresher Completed -----
 echo:
 
 set /p ans = Press any key to exit:
