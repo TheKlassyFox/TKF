@@ -95,19 +95,6 @@ mklink "C:\Program Files\TKF Corp\TheKlassyFox\Shortcuts\VSCode.lnk" "C:\Program
 
 echo:
 
-echo ----- Emptying Recycle Bin and Recent Files -----
-echo:
-
-rd /s /q %systemdrive%\$Recycle.bin
-del /F /Q %APPDATA%\Microsoft\Windows\Recent\AutomaticDestinations\*
-del /F /Q %APPDATA%\Microsoft\Windows\Recent\CustomDestinations\*
-del /F /Q %APPDATA%\Microsoft\Windows\Recent\*
-reg delete HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
-taskkill /f /im explorer.exe
-start explorer.exe
-
-echo:
-
 echo ----- Downloading VS Code -----
 echo:
 
@@ -133,6 +120,19 @@ echo:
 del GitInstaller.exe
 mklink "C:\Program Files\TKF Corp\TheKlassyFox\Shortcuts\Git.lnk" "C:\Program Files\TKF Corp\TheKlassyFox\Git\bin\git.exe"
 mklink "C:\Program Files\TKF Corp\TheKlassyFox\Shortcuts\GitCMD.lnk" "C:\Program Files\TKF Corp\TheKlassyFox\Git\git-cmd.exe"
+
+echo:
+
+echo ----- Emptying Recycle Bin and Recent Files -----
+echo:
+
+rd /s /q %systemdrive%\$Recycle.bin
+del /F /Q %APPDATA%\Microsoft\Windows\Recent\AutomaticDestinations\*
+del /F /Q %APPDATA%\Microsoft\Windows\Recent\CustomDestinations\*
+del /F /Q %APPDATA%\Microsoft\Windows\Recent\*
+reg delete HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
+taskkill /f /im explorer.exe
+start explorer.exe
 
 echo:
 
