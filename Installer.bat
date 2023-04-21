@@ -108,6 +108,34 @@ start explorer.exe
 
 echo:
 
+echo ----- Downloading VS Code -----
+echo:
+
+curl -L -o GitInstaller.exe https://github.com/git-for-windows/git/releases/download/v2.40.0.windows.1/PortableGit-2.40.0-64-bit.7z.exe
+
+echo:
+
+echo ----- Installing Git -----
+echo:
+
+echo Use this location for extraction: 'C:\Program Files\TKF Corp\TheKlassyFox\Git'.
+
+echo:
+
+GitInstaller.exe
+
+echo:
+
+set /p ans = Press any key after installing: 
+
+echo:
+
+del GitInstaller.exe
+mklink "C:\Program Files\TKF Corp\TheKlassyFox\Shortcuts\Git.lnk" "C:\Program Files\TKF Corp\TheKlassyFox\Git\bin\git.exe"
+mklink "C:\Program Files\TKF Corp\TheKlassyFox\Shortcuts\GitCMD.lnk" "C:\Program Files\TKF Corp\TheKlassyFox\Git\git-cmd.exe"
+
+echo:
+
 echo ----- Installer Completed -----
 echo:
 
